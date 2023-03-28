@@ -26,7 +26,26 @@ export const load = async () => {
           `
 	)
 
+  const { categories } = await hygraph.request(
+		`query MyQuery {
+      categories {
+        name
+        slug
+        id
+        domains {
+          name
+          id
+          price
+          image {
+            url
+          }
+        }
+      }
+    }`
+	);
+
 	return {
-		domains
+		domains,
+    categories
 	}
 }

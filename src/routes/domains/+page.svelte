@@ -7,10 +7,24 @@
 
 <main class="main">
 	<h1>domains</h1>
-	<Categories />
+
+	<!-- -------------------categories----------------------- -->
+	<div class="grid">
+		{#each data.categories as category}
+			<div class="grid-item">
+				<a href="#end">
+					<img src="image.jpg" alt="domain category" />
+					<h2 class="cat-name">
+						<a href={`/categories/${category.slug}`} class="bold">{category.name}</a><br />domains
+					</h2>
+				</a>
+			</div>
+		{/each}
+	</div>
+
+	<!-- -------------------------domains-------------------------- -->
 
 	{#each data.domains as domain}
-
 		<div class="project" id={domain.id}>
 			<section class="section">
 				<div class="product-ctn">
@@ -96,5 +110,48 @@
 		border: solid black 2px;
 		border-radius: 10px;
 		background-color: #3596ff;
+	}
+
+	/* -------------------cate------------------- */
+
+	img {
+		width: 100%;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto;
+		grid-auto-flow: row;
+		width: 100%;
+		justify-items: center;
+	}
+
+	.grid-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: #c4fff9;
+		margin-top: 10px;
+		padding: 20px;
+		border: solid black 3px;
+		border-radius: 3vw;
+		width: 80%;
+	}
+
+	img {
+		border: solid 2px black;
+		border-radius: 3vw;
+	}
+
+	.bold {
+		font-weight: 900;
+		font-size: 10vw;
+	}
+
+	.cat-name {
+		font-size: 5vw;
 	}
 </style>

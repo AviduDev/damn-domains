@@ -25,6 +25,9 @@ export const load = async ({ params }) => {
 				  name
 				  price
 				  slug
+				  image {
+					url
+				  }
 				}
 			
             }
