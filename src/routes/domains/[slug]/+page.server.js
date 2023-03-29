@@ -18,9 +18,16 @@ export const load = async ({ params }) => {
 		`query DomainIndex ($slug: String!) {
             domain (where: {slug: $slug}) {
                 name
+				details
+				price
                 image {
                   url
                 }
+				categories {
+					name
+					slug
+					id
+				  }
 			
             }
         }`,

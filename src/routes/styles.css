@@ -1,9 +1,12 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3 {
+    text-transform: uppercase;
     font-weight: bolder;
+    text-align: center;
 }
 
 a {
@@ -11,3 +14,6 @@ a {
     color: inherit;
 }
 
+img {
+    max-width: 100%;
+}
