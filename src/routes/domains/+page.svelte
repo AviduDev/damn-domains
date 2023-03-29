@@ -11,37 +11,53 @@
 	<!-- -------------------categories----------------------- -->
 	<div class="grid">
 		{#each data.categories as category}
-			<div class="grid-item">
-				<li class="categoryItem">
-					<!-- <img src={category.image.url} alt={category.name} /> -->
-					<h2 class="cat-name">
-						<a href={`/categories/${category.slug}`} class="bold">{category.name}</a>
-					</h2>
-				</li>
-			</div>
+			<a href={`/categories/${category.slug}`} class="categoryLink">
+				<!-- <img src={category.image.url} alt={category.name} /> -->
+				<h3 class="cat-name">
+					{category.name}
+				</h3>
+			</a>
 		{/each}
 	</div>
 
 	<!-- -------------------------domains-------------------------- -->
 
 	{#each data.domains as domain}
-		<div class="project" id={domain.id}>
-			<section class="section">
-				<div class="product-ctn">
-					<img class="product-img" src={domain.image.url} alt="" />
-					<a href={`/domains/${domain.slug}`}><h2>{domain.name}</h2></a>
-
-					<div class="btn-ctn">
-						<p>{domain.price}$</p>
-						<img class="cart-icon" src="cart.svg" alt="add to cart button" />
-					</div>
+		<a href={`/domains/${domain.slug}`} class="domain" id={domain.id}>
+			<div class="product-ctn">
+				<img class="product-img" src={domain.image.url} alt={domain.name} />
+				<div class="name detail">
+					<h2>{domain.name}</h2>
 				</div>
-			</section>
-		</div>
+				<div class="price detail">
+					<p>{domain.price}$</p>
+				</div>
+			</div>
+		</a>
 	{/each}
 </main>
 
 <style>
+	/* --------------------------------------------- */
+	.grid {
+		background-color: #3596ff;
+		border-radius: 3vw;
+		border: 2px solid black;
+		padding: 1vw;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 3vw 0 3vw 0;
+	}
+
+	.categoryLink {
+		margin: 1vw;
+		padding: 1vw;
+		border: 1px solid black;
+		border-radius: 3vw;
+		background-color: #c4fff9;
+		font-size: 5vw;
+	}
+	/* --------------------------------------------- */
 	main {
 		display: flex;
 		flex-direction: column;
@@ -53,16 +69,18 @@
 		font-size: 12vw;
 	}
 
-	.categoryItem {
-		list-style: none;
+	.domain {
+		margin: 2vw 0 2vw 0;
 	}
+
 	.product-img {
 		width: 100%;
 		aspect-ratio: 16 / 9;
-	}
-
-	.cart-icon {
-		width: 50px;
+		object-fit: cover;
+		object-position: center;
+		border: solid black 2px;
+		border-radius: 100px;
+		margin: 3vw 0 3vw 0;
 	}
 
 	.product-ctn {
@@ -71,18 +89,6 @@
 		border-radius: 10px;
 	}
 
-	.product-img {
-		border: solid black 2px;
-		border-radius: 100px;
-	}
-
-	.btn-ctn {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		justify-items: flex-end;
-		width: 100%;
-		height: 100%;
-	}
 
 	.product-ctn {
 		display: flex;
@@ -92,63 +98,26 @@
 		padding: 10px;
 	}
 
-	.btn-ctn p {
+	.detail {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		border: solid black 2px;
-		border-radius: 10px;
-		background-color: #c4fff9;
 		width: 100%;
-		height: 100%;
-		text-align: center;
-	}
-
-	.btn-ctn img {
-		border: solid black 2px;
-		border-radius: 10px;
-		background-color: #3596ff;
-	}
-
-	/* -------------------cate------------------- */
-
-	img {
-		width: 100%;
-	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr auto;
-		grid-auto-flow: row;
-		justify-items: center;
-	}
-
-	.grid-item {
-		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
-		background-color: #c4fff9;
 		margin: 1vw 0 1vw 0;
-		padding: 4vw;
-		border: solid black 3px;
+		padding: 1vw 0 1vw 0;
 		border-radius: 3vw;
-		width: 90%;
+		border: solid black 2px;
 	}
 
-	img {
-		border: solid 2px black;
-		border-radius: 3vw;
+	.name {
+		background-color: #fff;
 	}
-
-	.bold {
-		font-weight: 900;
+	
+	.price {
+		background-color: #c4fff9;
 		font-size: 8vw;
 	}
+	/* -------------------cate------------------- */
 
-	.cat-name {
-		padding: 1vw;
-	}
 </style>
