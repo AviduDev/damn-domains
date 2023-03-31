@@ -27,10 +27,10 @@
 			<div class="product-ctn">
 				<img class="product-img" src={domain.image.url} alt={domain.name} />
 				<div class="name detail">
-					<h2>{domain.name}</h2>
+					<h3>{domain.name}</h3>
 				</div>
 				<div class="price detail">
-					<p>{domain.price}$</p>
+					<h3>{domain.price}$</h3>
 				</div>
 			</div>
 		</a>
@@ -89,7 +89,6 @@
 		border-radius: 10px;
 	}
 
-
 	.product-ctn {
 		display: flex;
 		flex-direction: column;
@@ -113,11 +112,35 @@
 	.name {
 		background-color: #fff;
 	}
-	
+
 	.price {
 		background-color: #c4fff9;
 		font-size: 8vw;
 	}
 	/* -------------------cate------------------- */
+	/* ------------------------Responsive Design--------------------- */
+	/*---------------START WITH MOBILE FIRST--------------------*/
 
+	/* Small devices (landscape phones, 576px and up) */
+	@media (min-width: 576px) {
+		h1 {
+			font-size: 12vw;
+		}
+
+		h3 {
+			font-size: 8vw;
+		}
+	}
+
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) {
+	}
+
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+	}
 </style>

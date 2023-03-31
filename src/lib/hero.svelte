@@ -1,15 +1,13 @@
 <section>
 	<div class="hero-heading">
-		<h1>HUMAN READABLE DOMAIN NAMES</h1>
+		<h1 class="heroTitle">HUMAN READABLE DOMAIN NAMES</h1>
 	</div>
 	<div class="btn-ctn">
 		<div class="buy-btn-ctn">
-			<button class="buy-btn">BUY DOMAINS</button>
+			<a href="/domains" class="buy-btn"> BUY DOMAINS </a>
 		</div>
 		<div class="navContainer">
-			<a class="navLink" href="/"><button class="navBtn">CONTACT</button></a>
-			<a class="navLink" href="/"><button class="navBtn">ABOUT</button></a>
-			<a class="navLink" href="/"><button class="navBtn">CART</button></a>
+			<a href="/contact">Request a domain</a>
 		</div>
 	</div>
 </section>
@@ -19,7 +17,6 @@
         font-family: 'inter';
     } */
 
-
 	/* -------------------------nav links----------------------------- */
 
 	.navBtn {
@@ -28,16 +25,15 @@
 		border-radius: 3vw;
 		padding: 2vw;
 		margin: 1vw;
-		color: #023E8A;
+		color: #023e8a;
 		width: 100%;
 	}
 
 	.navContainer {
-		display: grid;
-		gap: 1vw;
-		grid-template-columns: 1fr 1fr 1fr;
-		justify-content: space-between;
+		text-align: center;
+		text-decoration: underline;
 		width: 100%;
+		margin: 1vw;
 	}
 
 	/* -------------------------nav links----------------------------- */
@@ -53,6 +49,12 @@
 		padding: 1vw;
 		border: solid 3px black;
 		border-radius: 3vw;
+		font-size: 16vw;
+	}
+
+	.hero-heading h1 {
+		text-align: start;
+		font-size: 15vw;
 	}
 
 	.buy-btn {
@@ -70,8 +72,12 @@
 		margin: 0px 10px 10px 10px;
 	}
 
-
-
+	.buy-btn button {
+		background: transparent;
+		border: none;
+		color: white;
+		padding: 1vw;
+	}
 
 	.btn-ctn {
 		display: flex;
@@ -85,33 +91,35 @@
 		width: 100vw;
 	}
 
+	section {
+		height: 96vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
 	/* --------Responsive Design-------- */
 
 	/* Small devices (landscape phones, 576px and up) */
 	@media (min-width: 576px) {
-		h1 {
-			font-size: 10vw;
-			text-align: center;
-			color: blueviolet;
+		.navContainer a {
+			font-size: 4vw;
 		}
+
+		.heroTitle {
+		font-size: 12vw;
 	}
+	}
+
 	/* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) {
-		h1 {
-			font-size: 10vw;
-			text-align: center;
-			color: rgb(43, 168, 226);
-		}
 	}
+
 	/* Large devices (desktops, 992px and up) */
 	@media (min-width: 992px) {
 	}
+
 	/* Extra large devices (large desktops, 1200px and up) */
 	@media (min-width: 1200px) {
-		h1 {
-			font-size: 10vw;
-			text-align: center;
-			color: rgb(0, 116, 10);
-		}
 	}
 </style>

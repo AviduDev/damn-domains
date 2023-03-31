@@ -1,4 +1,5 @@
-<script></script>
+<script>
+</script>
 
 <section>
 	<div class="grid">

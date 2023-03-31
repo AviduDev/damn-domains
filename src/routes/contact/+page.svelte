@@ -50,9 +50,6 @@
 </main>
 
 <style>
-	* {
-		background-color: #fefae0;
-	}
 	h1 {
 		text-align: center;
 		padding: 1vw;
@@ -60,6 +57,7 @@
 		font-weight: 900;
 		border: solid black 3px;
 		border-radius: 10px;
+		margin: 4vw 0 4vw 0;
 	}
 
 	.description p {
@@ -81,7 +79,7 @@
 	.contact {
 		border: solid black 3px;
 		border-radius: 10px;
-		margin: 20px 0 20px 0;
+		margin: 4vw 0 0 0;
 		overflow: hidden;
 		padding: 5vw;
 	}
@@ -103,9 +101,12 @@
 		background-color: #c4fff9;
 		width: 100%;
 		border: solid black 2px;
-		margin: 5px;
 		border-radius: 10px;
 		padding: 3vw;
+	}
+
+	textarea:active {
+		border: solid black 2px;
 	}
 
 	input::file-selector-button {
@@ -133,10 +134,11 @@
 		color: white;
 		font-weight: 900;
 		font-size: 6vw;
-		margin: 10px 0 0 0;
+		margin: 3vw 0 0 0;
 	}
 
 	.quote {
+		margin: 3vw 0 3vw 0;
 		font-weight: 900;
 	}
 	.author {
@@ -145,7 +147,7 @@
 	}
 
 	.item {
-		background-color: #C4FFF9;
+		background-color: #c4fff9;
 		padding: 3vw;
 		margin: 1vw;
 		text-align: center;
@@ -153,7 +155,8 @@
 		border-radius: 10px;
 	}
 
-	.social-sec, .social-ctn {
+	.social-sec,
+	.social-ctn {
 		display: flex;
 		flex-direction: column;
 	}
@@ -162,6 +165,46 @@
 		border: solid black 3px;
 		border-radius: 10px;
 		overflow: hidden;
+		margin: 4vw 0 0 0;
 	}
 
+	/* ------------------------Responsive Design--------------------- */
+	/*---------------START WITH MOBILE FIRST--------------------*/
+
+	/* Small devices (landscape phones, 576px and up) */
+	@media (min-width: 576px) {
+		h1 {
+			font-size: 12vw;
+		}
+		p, a {
+			font-size: 4vw;
+		}
+
+		input::placeholder {
+			font-size: 4vw;
+		}
+
+		textarea::placeholder {
+			font-size: 4vw;
+		}
+		input::file-selector-button {
+			font-size: 4vw;
+		}
+
+		h2 {
+			font-size: 10vw;
+		}
+	}
+
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) {
+	}
+
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+	}
 </style>

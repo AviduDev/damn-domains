@@ -8,6 +8,7 @@ specifiers:
   eslint-plugin-svelte3: ^4.0.0
   graphql: ^16.6.0
   graphql-request: ^5.2.0
+  lottie-web: ^5.10.2
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   svelte: ^3.54.0
@@ -25,6 +26,7 @@ devDependencies:
   eslint: 8.36.0
   eslint-config-prettier: 8.8.0_eslint@8.36.0
   eslint-plugin-svelte3: 4.0.0_wzem237sbvnwe7n34ytc5phasy
+  lottie-web: 5.10.2
   prettier: 2.8.7
   prettier-plugin-svelte: 2.10.0_5ir2xprf4ygk6mygilwnltaw3a
   svelte: 3.57.0
@@ -1043,6 +1045,10 @@ packages:
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: true
+
+  /lottie-web/5.10.2:
+    resolution: {integrity: sha512-d0PFIGiwuMsJYaF4uPo+qG8dEorlI+xFI2zrrFtE1bGO4WoLIz+NjremxEq1swpR7juR10aeOtmNh3d6G3ub0A==}
     dev: true
 
   /magic-string/0.27.0:

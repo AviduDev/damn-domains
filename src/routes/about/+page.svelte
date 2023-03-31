@@ -34,7 +34,7 @@
 		</div>
 	</section>
 	<!-- our team -->
-	<section class="team-sec">
+	<!-- <section class="team-sec">
 		<h2>our team</h2>
 		<div class="item">
 			<img class="user-icon" src="user.svg" alt="name of the user" />
@@ -55,7 +55,7 @@
 				</a>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- <Team /> -->
 	<!-- link to contact -->
 	<Contact />
@@ -80,16 +80,14 @@
 	h2 {
 		text-align: center;
 	}
-	main {
-		background-color: #FEFAE0;
-	}
 
 	.description {
-		background-color: #C4FFF9;
+		background-color: #c4fff9;
 	}
 
-	.item, .description {
-		background-color: #C4FFF9;
+	.item,
+	.description {
+		background-color: #c4fff9;
 		margin: 20px 0 0 0;
 		border: solid black 2px;
 		border-radius: 10px;
@@ -102,7 +100,7 @@
 	}
 
 	.team-sec {
-		background-color: #FFEB80;
+		background-color: #ffeb80;
 		border: solid black 3px;
 		border-radius: 10px;
 		padding: 10px;
@@ -113,5 +111,35 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	/* ------------------------Responsive Design--------------------- */
+	/*---------------START WITH MOBILE FIRST--------------------*/
+
+	/* Small devices (landscape phones, 576px and up) */
+	@media (min-width: 576px) {
+		h1 {
+			font-size: 12vw;
+		}
+
+		h2 {
+			font-size: 10vw;
+		}
+
+		p {
+			font-size: 4vw;
+		}
+	}
+
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) {
+	}
+
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
 	}
 </style>

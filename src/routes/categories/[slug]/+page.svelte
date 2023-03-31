@@ -5,69 +5,50 @@
 
 <section>
 	<!-- <img src={data.category.image.url} alt=""> -->
-	<h1>
+	<h1 class="categoryName">
 		{data.category.name}
+		<br />
+		<span class="subTitle"> domains </span>
 	</h1>
 
-	<div>
+	<div class="domainContainer">
 		{#each data.category.domains as domain}
-			<div class="project" id={domain.id}>
-				<section class="section">
-					<div class="product-ctn">
-						<img class="product-img" src={domain.image.url} alt="" />
-						<a href={`/domains/${domain.slug}`}><h2>{domain.name}</h2></a>
-
-						<div class="btn-ctn">
-							<p>{domain.price}$</p>
-							<img class="cart-icon" src="cart.svg" alt="add to cart button" />
-						</div>
+			<a href={`/domains/${domain.slug}`} class="domain" id={domain.id}>
+				<div class="product-ctn">
+					<img class="product-img" src={domain.image.url} alt={domain.name} />
+					<div class="name detail">
+						<h3>{domain.name}</h3>
 					</div>
-				</section>
-			</div>
+					<div class="price detail">
+						<h3>{domain.price}$</h3>
+					</div>
+				</div>
+			</a>
 		{/each}
 	</div>
 </section>
 
 <style>
-.product-img {
-		width: 100%;
-		aspect-ratio: 16 / 9;
+	/* ------------------------------------------- */
+
+	.product-ctn {
+		margin: 4vw 0 0 0;
 	}
 
-	.cart {
-		cursor: pointer;
-	}
-	.cart-icon {
-		width: 50px;
+	.product-img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		object-position: center;
+		border: solid black 2px;
+		border-radius: 100px;
+		margin: 3vw 0 3vw 0;
 	}
 
 	.product-ctn {
 		background-color: #ffeb80;
 		border: solid black 3px;
 		border-radius: 10px;
-	}
-
-	.product-img {
-		border: solid black 2px;
-		border-radius: 100px;
-	}
-
-	h2 {
-		background-color: #fff;
-		color: black;
-		padding: 1vw;
-		border: solid black 2px;
-		border-radius: 10px;
-		text-align: center;
-		margin: 10px;
-	}
-
-	.btn-ctn {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		justify-items: flex-end;
-		width: 100%;
-		height: 100%;
 	}
 
 	.product-ctn {
@@ -78,21 +59,68 @@
 		padding: 10px;
 	}
 
-	.btn-ctn p {
+	.detail {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		border: solid black 2px;
-		border-radius: 10px;
-		background-color: #c4fff9;
 		width: 100%;
-		height: 100%;
-		text-align: center;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 1vw 0 1vw 0;
+		padding: 1vw 0 1vw 0;
+		border-radius: 3vw;
+		border: solid black 2px;
 	}
 
-	.btn-ctn img {
-		border: solid black 2px;
-		border-radius: 10px;
-		background-color: #3596ff;
+	.name {
+		background-color: #fff;
 	}
+
+	.price {
+		background-color: #c4fff9;
+		font-size: 8vw;
+	}
+
+	.categoryName {
+		background-color: #c4fff9;
+		border: solid black 2px;
+		padding: 3vw;
+		border-radius: 3vw;
+		font-size: 10vw;
+	}
+
+	.subTitle {
+		font-size: 5vw;
+	}
+
+	/* ------------------------Responsive Design--------------------- */
+	/*---------------START WITH MOBILE FIRST--------------------*/
+
+	/* Small devices (landscape phones, 576px and up) */
+	@media (min-width: 576px) {
+		h3 {
+			font-size: 8vw;
+		}
+
+		.categoryName {
+			font-size: 12vw;
+		}
+
+		.subTitle {
+			font-size: 8vw;
+		}
+	}
+
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) {
+	}
+
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+	}
+
+	
 </style>
