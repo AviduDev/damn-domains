@@ -1,6 +1,5 @@
 <script>
 	import Categories from '$lib/categories.svelte';
-	import DomainCard from '$lib/domainCard.svelte';
 
 	export let data;
 </script>
